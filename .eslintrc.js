@@ -29,7 +29,8 @@ module.exports = {
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/typescript',
-    'plugin:boundaries/recommended'
+    'plugin:boundaries/recommended',
+    'plugin:storybook/recommended'
   ],
   settings: {
     'import/resolver': {
@@ -109,5 +110,10 @@ module.exports = {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
   },
-  overrides: [{ files: ['**/*.test.*'], rules: { 'boundaries/element-types': 'off' } }]
-}
+  overrides: [{
+    files: ['**/*.test.*'],
+    rules: {
+      'boundaries/element-types': 'off'
+    }
+  }]
+};
