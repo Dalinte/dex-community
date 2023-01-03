@@ -1,3 +1,5 @@
+import { withDesign } from 'storybook-addon-designs'
+
 import MyButton from './Button.vue'
 
 // More on default export: https://storybook.js.org/docs/vue/writing-stories/introduction#default-export
@@ -13,6 +15,7 @@ export default {
       options: ['small', 'medium', 'large'],
     },
   },
+  decorators: [withDesign],
 }
 
 // More on component templates: https://storybook.js.org/docs/vue/writing-stories/introduction#using-args
@@ -32,6 +35,13 @@ export const Primary = Template.bind({})
 Primary.args = {
   primary: true,
   label: 'Button',
+}
+
+Primary.parameters = {
+  design: {
+    type: 'figma',
+    url: 'https://www.figma.com/file/pI5vPaid9qzYuYKnTdFVAO/DEX---Decentralized-Exchange-Platform-(Community)?node-id=1897%3A13586&t=AKANnhSkxvf8QDld-4',
+  },
 }
 
 export const Secondary = Template.bind({})
