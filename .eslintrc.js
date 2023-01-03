@@ -10,14 +10,14 @@ module.exports = {
     ecmaVersion: 2020,
     ecmaFeatures: {
       jsx: true,
-      modules: true
+      modules: true,
     },
-    sourceType: 'module'
+    sourceType: 'module',
   },
   env: {
     browser: true,
     es6: true,
-    node: true
+    node: true,
   },
   plugins: ['@typescript-eslint'],
   extends: [
@@ -36,8 +36,8 @@ module.exports = {
     'import/resolver': {
       'eslint-import-resolver-typescript': {},
       node: {
-        paths: ['src']
-      }
+        paths: ['src'],
+      },
     },
     'boundaries/elements': [
       { type: 'app', pattern: 'app/*' },
@@ -50,10 +50,13 @@ module.exports = {
     ],
     'boundaries/ignore': ['**/*.test.*'],
     ...createAliasSetting({
-      '@': `${path.resolve(__dirname, './src')}`
-    })
+      '@': `${path.resolve(__dirname, './src')}`,
+    }),
   },
   rules: {
+    'comma-dangle': ['error', {
+      objects: 'always-multiline',
+    }],
     'import/order': [
       'error',
       {
@@ -68,7 +71,7 @@ module.exports = {
           { group: 'internal', position: 'after', pattern: '~/shared/**' }
         ],
         pathGroupsExcludedImportTypes: ['builtin'],
-        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index']
+        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
       }
     ],
     'no-restricted-imports': [
@@ -89,7 +92,7 @@ module.exports = {
           { message: 'Prefer absolute imports instead of relatives (for root modules)', group: ['../**/features'] },
           { message: 'Prefer absolute imports instead of relatives (for root modules)', group: ['../**/entities'] },
           { message: 'Prefer absolute imports instead of relatives (for root modules)', group: ['../**/shared'] }
-        ]
+        ],
       }
     ],
     'boundaries/element-types': [
@@ -104,16 +107,16 @@ module.exports = {
           { from: 'features', allow: ['entities', 'shared'] },
           { from: 'entities', allow: ['shared'] },
           { from: 'shared', allow: ['shared'] }
-        ]
+        ],
       }
     ],
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
   },
   overrides: [{
     files: ['**/*.test.*'],
     rules: {
-      'boundaries/element-types': 'off'
-    }
-  }]
-};
+      'boundaries/element-types': 'off',
+    },
+  }],
+}
