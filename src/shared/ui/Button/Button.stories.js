@@ -8,11 +8,10 @@ export default {
   component: MyButton,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
-    backgroundColor: { control: 'color' },
     onClick: {},
     size: {
       control: { type: 'select' },
-      options: ['small', 'medium', 'large'],
+      options: ['small', 'default', 'large'],
     },
   },
   decorators: [withDesign],
@@ -27,13 +26,13 @@ const Template = (args) => ({
     return { args }
   },
   // And then the `args` are bound to your component with `v-bind="args"`
-  template: '<my-button v-bind="args" />',
+  template: '<MyButton v-bind="args" />',
 })
 
 export const Primary = Template.bind({})
 // More on args: https://storybook.js.org/docs/vue/writing-stories/args
 Primary.args = {
-  primary: true,
+  variant: 'tonal',
   label: 'Button',
 }
 
