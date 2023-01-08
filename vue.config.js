@@ -6,7 +6,10 @@ module.exports = defineConfig({
   lintOnSave: false,
   configureWebpack: {
     plugins: [
-      new VuetifyPlugin({ autoImport: true }),
+      new VuetifyPlugin({
+        autoImport: true,
+        styles: { configFile: 'src/app/providers/vuetify/settings.scss' },
+      }),
     ],
   },
 })
