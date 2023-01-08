@@ -1,18 +1,22 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="@/app/assets/logo.png"/>
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
-  </div>
+  <v-app>
+    <v-layout style="z-index: 0">
+      <v-app-bar color="grey-lighten-2"></v-app-bar>
+      <v-navigation-drawer color="grey-darken-2" permanent></v-navigation-drawer>
+      <v-navigation-drawer color="grey-darken-2" permanent location="right"></v-navigation-drawer>
+      <v-main>
+        <v-btn>Primary</v-btn>
+        <v-checkbox disabled label="Checkbox"></v-checkbox>
+        <v-switch color="red" label="Switch" inset></v-switch>
+      </v-main>
+    </v-layout>
+  </v-app>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import HelloWorld from '@/features/HelloWorld.vue';
 
 export default defineComponent({
   name: 'HomeView',
-  components: {
-    HelloWorld
-  }
 })
 </script>

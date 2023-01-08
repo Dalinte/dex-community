@@ -1,3 +1,2 @@
-@import '@/app/assets/styles/hello.scss';
-@import '@/app/assets/styles/nav.scss';
-@import '@/app/assets/styles/app.scss';
+@forward '@/app/assets/styles/colors.scss';
+@forward '@/app/assets/styles/global.scss';
