@@ -6,7 +6,7 @@ import { createVuetify, ThemeDefinition } from 'vuetify'
 // @ts-ignore
 import colors from 'vuetify/lib/util/colors'
 
-const myCustomLightTheme: ThemeDefinition = {
+const dexTheme: ThemeDefinition = {
   dark: false,
   colors: {
     primary: '#0177FB',
@@ -28,9 +28,9 @@ export const defaults = {
 }
 
 export const theme = {
-  defaultTheme: 'myCustomLightTheme',
+  defaultTheme: 'dexTheme',
   themes: {
-    myCustomLightTheme,
+    dexTheme,
   },
 }
 
