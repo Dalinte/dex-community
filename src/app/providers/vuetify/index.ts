@@ -3,18 +3,17 @@ import 'vuetify/styles'
 
 import { createVuetify, ThemeDefinition } from 'vuetify'
 
-// @ts-ignore
-import colors from 'vuetify/lib/util/colors'
+import colors from '@/app/assets/styles/colors';
 
 const dexTheme: ThemeDefinition = {
   dark: false,
   colors: {
-    primary: '#0177FB',
-    secondary: '#3B3C4E',
-    error: '#FF6370',
-    info: '#BB6BDA',
-    success: '#53F3C3',
-    warning: '#FFD95C',
+    primary: colors.blue[5],
+    secondary: colors.gray[18],
+    error: colors.red[5],
+    info: colors.purple[5],
+    success: colors.green[5],
+    warning: colors.yellow[5],
   },
 }
 
