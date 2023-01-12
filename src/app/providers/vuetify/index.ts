@@ -23,6 +23,11 @@ export const defaults = {
   VBtn: {
     variant: 'flat',
     color: 'primary',
+    size: 'x-large'
+  },
+  VSwitch: {
+    inset: true,
+    color: 'primary',
   },
 }
 

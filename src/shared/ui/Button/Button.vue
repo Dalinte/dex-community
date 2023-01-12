@@ -4,7 +4,6 @@
 
 <script lang="ts">
 import { defineComponent, reactive, PropType } from 'vue';
-import {IButtonSize} from '@/shared/ui/Button/interface'
 
 export default defineComponent({
   name: 'my-button',
@@ -12,10 +11,6 @@ export default defineComponent({
   props: {
     label: {
       type: String,
-    },
-    size: {
-      type: String as PropType<IButtonSize>,
-      default: 'medium' as IButtonSize,
     },
   },
 

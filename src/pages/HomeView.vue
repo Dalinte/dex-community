@@ -7,7 +7,7 @@
       <v-main>
         <v-btn>Primary</v-btn>
         <v-checkbox disabled label="Checkbox"></v-checkbox>
-        <v-switch color="red" label="Switch" inset></v-switch>
+        <v-switch></v-switch>
       </v-main>
     </v-layout>
   </v-app>

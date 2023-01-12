@@ -1,13 +1,14 @@
-@use '@/app/assets/styles/colors.scss';
+//@use '@/app/assets/styles/colors.scss';
 
-@forward 'vuetify/settings' with (
+//@forward 'vuetify/settings' with (
   //$utilities: false,
   //$color-pack: false,
   //$button-background: colors.$blue5,
   //$button-color: colors.$white,
   //$button-height: 100px,
-  $checkbox-disabled-color: red,
+  //$checkbox-disabled-color: red,
   //$button-disabled-opacity: 1,
   //$button-disabled-overlay: 1,
-  //$button-color: #ffffff
-);
+  //$button-color: #ffffff,
+  //$button-sizes: ('height': 40px)
+//);
