@@ -1,12 +1,12 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 
-import HomeView from '@/pages/HomeView.vue'
+import SwapPage from '@/pages/Exchange.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'home',
-    component: HomeView,
+    component: SwapPage,
   },
   {
     path: '/about',
