@@ -1,9 +1,10 @@
 import '@mdi/font/css/materialdesignicons.css'
 import 'vuetify/styles'
-
 import { createVuetify, ThemeDefinition } from 'vuetify'
+import { aliases, mdi } from 'vuetify/iconsets/mdi'
 
-import colors from '@/app/assets/styles/colors';
+import colors from '@/app/assets/styles/colors'
+import { custom } from '@/app/providers/vuetify/iconset/custom'
 
 const dexTheme: ThemeDefinition = {
   dark: false,
@@ -14,6 +15,7 @@ const dexTheme: ThemeDefinition = {
     info: colors.purple[5],
     success: colors.green[5],
     warning: colors.yellow[5],
+    'gray-20': colors.gray[20],
   },
 }
 
@@ -23,7 +25,6 @@ export const defaults = {
   VBtn: {
     variant: 'flat',
     color: 'primary',
-    size: 'x-large'
   },
   VSwitch: {
     inset: true,
@@ -38,9 +39,22 @@ export const theme = {
   },
 }
 
+export const icons = {
+  defaultSet: 'mdi',
+  sets: {
+    mdi,
+    custom,
+  },
+  aliases: {
+    ...aliases,
+    user: 'mdi-account-circle-outline',
+  },
+}
+
 export const vuetifyConfig = {
   defaults,
   theme,
+  icons,
 }
 
 export const vuetify = createVuetify(vuetifyConfig)
