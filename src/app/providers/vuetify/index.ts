@@ -15,6 +15,7 @@ const dexTheme: ThemeDefinition = {
     info: colors.purple[5],
     success: colors.green[5],
     warning: colors.yellow[5],
+    'gray-18': colors.gray[18],
     'gray-20': colors.gray[20],
   },
 }

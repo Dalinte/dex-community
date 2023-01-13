@@ -35,7 +35,7 @@
       <span>BSC</span>
       <v-btn color="secondary">Connect to a wallet</v-btn>
     </div>
-    <v-icon icon="custom:custom-collapse" size="x-large"></v-icon>
+    <v-icon class="bg-gray-18" icon="mdi-dots-grid" size="x-large"></v-icon>
   </div>
 </template>
 
