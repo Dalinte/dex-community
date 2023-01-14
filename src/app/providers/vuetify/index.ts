@@ -49,6 +49,7 @@ export const icons = {
   aliases: {
     ...aliases,
     user: 'mdi-account-circle-outline',
+    swap: 'mdi-swap-horizontal',
   },
 }
 
