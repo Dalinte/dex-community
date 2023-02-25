@@ -3,7 +3,7 @@ import 'vuetify/styles'
 import { createVuetify, ThemeDefinition } from 'vuetify'
 import { aliases, mdi } from 'vuetify/iconsets/mdi'
 
-import colors from '@/app/assets/styles/colors'
+import colors from '@/shared/config/colors'
 import { custom } from '@/app/providers/vuetify/iconset/custom'
 
 const dexTheme: ThemeDefinition = {
