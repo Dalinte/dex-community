@@ -35,6 +35,7 @@
           </v-btn>
         </v-btn-toggle>
       </div>
+      <Chart/>
     </template>
     <template v-slot:right>
       <div></div>
@@ -45,10 +46,12 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import WrapContent from "@/widgets/wrapContent/WrapContent.vue";
+import Chart from "@/entities/chart/Chart.vue";
 
 export default defineComponent({
   name: 'ExchangePage',
   components: {
+    Chart,
     WrapContent
   },
   data() {
